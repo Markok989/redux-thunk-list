@@ -5,14 +5,17 @@ import UnpackedItemsContainer from '../containers/UnpackedItemsContainer';
 import MarkAllAsUnpackedContainer from '../containers/MarkAllAsUnpackedContainer';
 import UnpackedFilterContainer from '../containers/UnpackedFilterContainer';
 import PackedFilterContainer from '../containers/PackedFilterContainer';
+import UnDoRedoContainer from '../containers/UnDoRedoContainer';
 
 import './Application.css';
+
 
 class Application extends Component {
   render() {
     return (
       <div className="Application">
         <NewItemContainer />
+        <UnDoRedoContainer />
         <UnpackedItemsContainer title="Unpacked Items" render={() => <UnpackedFilterContainer />} />
         <PackedItemsContainer title="Packed Items" render={() => <PackedFilterContainer />} />
         <MarkAllAsUnpackedContainer />
